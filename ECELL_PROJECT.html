@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>ECELL_PROJECT</title>
+    </head>
+    <body style="background: linear-gradient(to right,orange,yellow,orange)">
+        <center><h1><font face="Impact" color="blue">EMPLOYEE DETAILS FINDER</font></h1></center>
+        <form id="frm" action="yl.php" target="i" method="POST">
+        <center><h2><font face="Comic Sans MS" color="green">Enter your query to fetch details</font></h2></center><br>
+        <center><input type="text" id="query" name="query" size=70 oninput="my()">
+        <input type="submit" value="Submit"></center>
+        </form><br><br><br>
+        <center><iframe name="i" width=800 height=400 style="background-color:lightskyblue;color:white"></iframe></center>
+    <script>
+        function my(){
+            var x=document.getElementById("query").value;
+            var y=x.substring(0,6);
+            if((y.localeCompare("DELETE"))==0){
+                location.reload();
+                alert("CANNOT DELETE SORRY");
+            }
+        }
+    </script>
+    </body>
+        
+</html>
